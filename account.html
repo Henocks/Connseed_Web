@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    {% csrf_token %}
+
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,11 +14,11 @@
     <title>Connseed - Light&Powerful Smart Farming Solution</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/static/css/simple-sidebar.css" rel="stylesheet">
-    <link href="/static/css/fb.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/fb.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +35,7 @@
             overflow-y: auto;
             padding: 0;
             width: 100%;
-            background: url(/static/bg.png) repeat center center fixed;
+            background: url(bg.png) repeat center center fixed;
             background-size: cover;
         }
     </style>
@@ -49,21 +49,21 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="/" style="color:white; font-size:30px">
+                    <a href="index.html" style="color:white; font-size:30px">
                         Connseed.
                     </a>
                 </li>
                 <li>
-                    <a href="/account">계정</a>
+                    <a href="account.html">계정</a>
                 </li>
                 <li>
-                    <a href="/device">디바이스 관리</a>
+                    <a href="device.html">디바이스 관리</a>
                 </li>
                 <li>
-                    <a href="/monitoring">모니터링</a>
+                    <a href="monitoring.html">모니터링</a>
                 </li>
                 <li>
-                    <a href="/analysis">프리미엄 분석</a>
+                    <a href="analysis.html">프리미엄 분석</a>
                 </li>
             </ul>
 
@@ -86,15 +86,14 @@
                         <div class="col-md-3">
                             <div class="login-box well">
                                <form accept-charset="UTF-8" role="form" method="post" action="">
-                                   {%csrf_token%}
                                   <legend>Login</legend>
                                   <div class="form-group">
                                       <label for="username">Username</label>
-                                      {{ form.id }}
+                                      <input name="user_id" value='' id="username" placeholder="Username" type="text" class="form-control" />
                                   </div>
                                       <div class="form-group">
                                       <label for="password">Password</label>
-                                        {{ form.password }}
+                                      <input name="password" id="password" value='' placeholder="Password" type="password" class="form-control" />
                                   </div>
                           <div class="form-group">
                           <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login" />
@@ -110,10 +109,10 @@
   </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
-    <script src="/static/js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>
