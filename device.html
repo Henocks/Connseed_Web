@@ -83,10 +83,17 @@
                         <p style="font-size:20px; color:white">This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</pstyle="font-size:30px;>
                         <p style="color:white">Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
 
+                        <div>
+                            <script>
+                                $.get('http://169.56.126.151/Data/GetRawData?device=1', function (data) { $('.result').html(data); alert('Load was performed.'); });
+                            </script>
+                        </div>
+
                         <ol>
                             <li class="rectangle-list">
                                 <a>Device 1</a>
                                 <ul class="hide">
+                                    <li><div style="background-color:rgba(50, 50, 30, 0.5); "></div></li>
                                     <li><a href="">ID : d5</a></li>
                                     <li><a href="">POS : D-5C Area (학교 뒷산)</a></li>
                                     <li><a href="">BAT : 70%</a></li>
